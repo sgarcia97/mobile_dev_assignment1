@@ -10,7 +10,8 @@ const styles = StyleSheet.create({
       button:{
         paddingInline:20,
         paddingBlock:10,
-        backgroundColor:"blue"
+        backgroundColor:"blue",
+        borderRadius:7
       },
       buttontext:{
         color:"#ffffff"
