@@ -1,9 +1,21 @@
 import { Stack } from 'expo-router';
 
-export default function Layout() {
+const Layout = () => {
   return (
-    <Stack>
+    <Stack  
+    screenOptions={{
+      headerStyle: {
+        backgroundColor: '#000',
+      },
+      headerTintColor: '#505050',
+      headerTitleStyle: {
+        fontWeight: 'bold',
+      },
+    }}>
       <Stack.Screen name="index" />
+      <Stack.Screen name="signin" />
     </Stack>
   );
 }
+
+export default Layout;
