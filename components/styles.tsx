@@ -6,6 +6,7 @@ const styles = StyleSheet.create({
         backgroundColor: '#fff',
         alignItems: 'center',
         justifyContent: 'center',
+        gap: 5
       },
       welcometitle:{
         fontSize:40,

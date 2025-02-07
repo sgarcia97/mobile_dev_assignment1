@@ -10,8 +10,7 @@ const Template = ({children, ...props}:TemplateProps) => {
                 <View>{children}</View>
             </ScrollView>
         </SafeAreaView>
-        
     )
 }
 
-export default Template
+export default Template;

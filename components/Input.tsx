@@ -1,18 +1,26 @@
-import {Text, View, TextInput} from "react-native"
+import {Text, View, TextInput, TextInputProps } from "react-native"
 import styles from "./styles"
 type InputProp = {
     label:string;
     place:string;
-    value?:any
+    secure?:boolean;
+    capitalize?: TextInputProps['autoCapitalize'];
+    value?:any;
+    onChangeText: (text: string) => void;
 }
-const Input = (props:InputProp) => {
+const CustomInput = ({ label, place, secure = false, capitalize="none", value, onChangeText }: InputProp) => { // destructured props + default secure value
     return(
-     
-            <View style={styles.inputWrapper} >
-                <Text style={styles.label}>{props.label}</Text>
-                <TextInput placeholder={props.place} value={props.value} style={styles.input}/>
-            </View>
+        <View style={styles.inputWrapper} >
+            <Text style={styles.label}>{label}</Text>
+            <TextInput 
+                placeholder={place} 
+                value={value} 
+                style={styles.input} 
+                secureTextEntry={secure} 
+                autoCapitalize={capitalize} 
+                onChangeText={onChangeText} />
+        </View>
     )
 }
 
-export default Input
+export default CustomInput;
