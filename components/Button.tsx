@@ -3,7 +3,7 @@ import styles from "./styles"
 type ButtonProp = {
     title:string;
 }
-const Button = (props:ButtonProp) => {
+const CustomButton = (props:ButtonProp) => {
     return(
         <TouchableHighlight>
             <View style={styles.button} >
