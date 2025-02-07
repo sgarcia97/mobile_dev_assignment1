@@ -4,7 +4,7 @@ const TabLayout = () => {
     return(
         <Tabs>
             <Tabs.Screen name="index" options={{
-
+                title:"Welcome"
             }}/>
             <Tabs.Screen name="calgary" options={{
 
@@ -16,4 +16,4 @@ const TabLayout = () => {
     )
 }
 
-export default TabLayout
+export default TabLayout;

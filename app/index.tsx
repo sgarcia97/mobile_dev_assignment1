@@ -7,6 +7,7 @@ import React, {useState} from 'react';
 
 // login data
 import logins from '../credentials.json';
+import { router } from 'expo-router';
 
 const Landing= (): JSX.Element => {
   const [username, setUsername] = useState<string>('');
@@ -40,7 +41,8 @@ const Landing= (): JSX.Element => {
     }
 
     if (validateCredentials(username, password)) {
-      Alert.alert('Success', 'Sign-in successful!'); // router to home
+      //Alert.alert('Success', 'Sign-in successful!'); // router to home
+      router.replace('/home');
       // empty username and password input
       setUsername('');
       setPassword('');
