@@ -55,7 +55,7 @@ const Landing= (): JSX.Element => {
       <Text style={styles.welcometitle}>Welcome to Explore Canada</Text>
       <CustomInput place="Username" label="Username" value={username} onChangeText={setUsername}/>
       <CustomInput place="Password" label="Password" secure={true} value={password} onChangeText={setPassword}/>
-      <CustomButton title="Welcome" />
+      <CustomButton title="Welcome" onPress={handleSignIn}/>
     </View>
   );
 }
