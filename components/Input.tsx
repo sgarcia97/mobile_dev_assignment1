@@ -1,16 +1,20 @@
 import {Text, View, TextInput} from "react-native"
 import styles from "./styles"
 type InputProp = {
-    label:string;
-    place:string;
-    value?:any
+    haveLabel:boolean;
+    label?:string;
+    setVal: (value:any) => void;
+    options?:any;
 }
-const Input = (props:InputProp) => {
+
+const Input = ({options, setVal,...props}:InputProp) => {
+   const handleChange = (text:any) => {
+    setVal(text)
+   }
     return(
-     
             <View style={styles.inputWrapper} >
-                <Text style={styles.label}>{props.label}</Text>
-                <TextInput placeholder={props.place} value={props.value} style={styles.input}/>
+                { props.haveLabel && <Text style={styles.label}>{props.label}</Text>}
+                <TextInput {...options} style={styles.input} onChangeText={text => handleChange(text)}/>
             </View>
     )
 }

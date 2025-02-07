@@ -2,10 +2,15 @@ import {Text, View, TouchableHighlight} from "react-native"
 import styles from "./styles"
 type ButtonProp = {
     title:string;
+    setAlert:()=>void;
 }
-const Button = (props:ButtonProp) => {
+    const handleClick = () => {
+
+    }
+
+const Button = ({setAlert, ...props}:ButtonProp) => {
     return(
-        <TouchableHighlight>
+        <TouchableHighlight onPress={setAlert}>
             <View style={styles.button} >
                 <Text style={styles.buttontext}>{props.title}</Text>
             </View>

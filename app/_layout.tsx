@@ -1,21 +1,13 @@
 import { Stack } from 'expo-router';
 
-const Layout = () => {
+const RootLayout = () => {
   return (
-    <Stack  
-    screenOptions={{
-      headerStyle: {
-        backgroundColor: '#000',
-      },
-      headerTintColor: '#505050',
-      headerTitleStyle: {
-        fontWeight: 'bold',
-      },
-    }}>
-      <Stack.Screen name="index" />
-      <Stack.Screen name="signin" />
+    <Stack>
+      <Stack.Screen name="index" options={{
+        headerShown:false
+      }}/>
     </Stack>
   );
 }
 
-export default Layout;
+export default RootLayout;
