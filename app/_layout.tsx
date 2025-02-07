@@ -13,7 +13,7 @@ const Layout = () => {
       },
     }}>
       <Stack.Screen name="index" />
-      <Stack.Screen name="signin" />
+      <Stack.Screen name="home" />
     </Stack>
   );
 }
