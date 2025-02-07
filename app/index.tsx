@@ -7,6 +7,7 @@ import React, {useState} from 'react';
 
 // login data
 import logins from '../credentials.json';
+import { router } from 'expo-router';
 
 const Landing= (): JSX.Element => {
   const [username, setUsername] = useState<string>('');
@@ -38,11 +39,11 @@ const Landing= (): JSX.Element => {
       Alert.alert('Error', 'Password must be at least 8 characters long and include at least one uppercase letter, one lowercase letter, one number, and one special character.');
       return;
     }
-    Alert.alert('Success', 'Sign-in successful!');
 
     if (validateCredentials(username, password)) {
-      Alert.alert('Success', 'Sign-in successful!'); // router to home
-      // empty username and passwor input
+      //Alert.alert('Success', 'Sign-in successful!'); // router to home
+      router.replace('/home');
+      // empty username and password input
       setUsername('');
       setPassword('');
     } else {
@@ -56,7 +57,7 @@ const Landing= (): JSX.Element => {
       <Text style={styles.welcometitle}>Welcome to Explore Canada</Text>
       <CustomInput place="Username" label="Username" value={username} onChangeText={setUsername}/>
       <CustomInput place="Password" label="Password" secure={true} value={password} onChangeText={setPassword}/>
-      <CustomButton title="Welcome" />
+      <CustomButton title="Welcome" onPress={handleSignIn}/>
     </View>
   );
 }
