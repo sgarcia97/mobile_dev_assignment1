@@ -4,7 +4,7 @@ const TabLayout = () => {
     return(
         <Tabs>
             <Tabs.Screen name="index" options={{
-                title:"Welcome"
+                title:"Home"
             }}/>
             <Tabs.Screen name="calgary" options={{
 
