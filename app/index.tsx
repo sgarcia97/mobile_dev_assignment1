@@ -38,11 +38,10 @@ const Landing= (): JSX.Element => {
       Alert.alert('Error', 'Password must be at least 8 characters long and include at least one uppercase letter, one lowercase letter, one number, and one special character.');
       return;
     }
-    Alert.alert('Success', 'Sign-in successful!');
 
     if (validateCredentials(username, password)) {
       Alert.alert('Success', 'Sign-in successful!'); // router to home
-      // empty username and passwor input
+      // empty username and password input
       setUsername('');
       setPassword('');
     } else {
