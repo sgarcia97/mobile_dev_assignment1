@@ -7,9 +7,11 @@ import Template from "../../components/Template"
 
 const Home = () => {
   return (
-    <View style={styles.container}>
-      <Text style={styles.welcometitle}>Edmonton</Text>
-    </View>
+    <Template>
+    
+        <Text style={styles.welcometitle}>Calgary</Text>
+   
+    </Template>
   );
 }
 
