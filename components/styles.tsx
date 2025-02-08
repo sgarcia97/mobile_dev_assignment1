@@ -12,6 +12,13 @@ const styles = StyleSheet.create({
         justifyContent:"center",
         gap:10
       },
+      header:{
+        height:50
+      },
+      scrView:{
+        flex:1,
+        position:"relative",
+      },
       welcometitle:{
         fontSize:40,
         textAlign:"center",

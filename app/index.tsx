@@ -42,7 +42,7 @@ const Landing= (): JSX.Element => {
 
     if (validateCredentials(username, password)) {
       //Alert.alert('Success', 'Sign-in successful!'); // router to home
-      router.replace('/home');
+      router.replace('(home)');
       // empty username and password input
       setUsername('');
       setPassword('');
