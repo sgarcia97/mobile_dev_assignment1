@@ -4,13 +4,13 @@ const TabLayout = () => {
     return(
         <Tabs>
             <Tabs.Screen name="index" options={{
-                title:"Welcome"
+                title:'Welcome'
             }}/>
             <Tabs.Screen name="calgary" options={{
-
+                title:'Calgary'
             }}/>
             <Tabs.Screen name="edmonton" options={{
-
+                title:'Edmonton'
             }}/>
         </Tabs>
     )
