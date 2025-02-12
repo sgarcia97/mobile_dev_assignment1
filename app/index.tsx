@@ -57,7 +57,7 @@ const Landing = (): JSX.Element => {
   // main component
   return (
     <View style={styles.container}>
-      <Text style={styles.welcometitle}>Welcome to Explore Canada</Text>
+      <Text style={styles.welcometitle}>Welcome to Explore Alberta</Text>
       <CustomInput
         place="Username"
         label="Username"
