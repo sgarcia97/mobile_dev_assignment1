@@ -1,15 +1,20 @@
-import { Text, View, Image } from "react-native";
+import { Text, View, Image, Linking, TouchableOpacity } from "react-native";
 import styles from "../../components/styles";
 import Template from "../../components/Template";
 import CityButton from "../../components/CityButton";
+import CityDescriptions from "../../components/CityDescriptions";
 
 const Home = () => {
+
   return (
     <Template>
-        <Text style={[styles.welcometitle, { marginTop: 5 }]}>
-          Welcome to Explore Alberta
-        </Text>
-        <Text style={{textAlign:"center"}}>Welcome to our app. Select your city to get started</Text>
+      <Image
+        source={require("../../assets/calgary.png")}
+        style={styles.pageImage}
+      />
+      <Text style={styles.welcometitle}>Welcome to Calgary</Text>
+      <CityButton color="red" link="https://www.calgary.ca/home.html" text="Go to City page"/>
+      <CityDescriptions city="Calgary"/>
     </Template>
   );
 };

@@ -5,7 +5,7 @@ import {Text} from "react-native"
 const TabLayout = () => {
     return(
         <Tabs> 
-            <Tabs.Screen name="index" options={{
+            {/* <Tabs.Screen name="index" options={{
                 headerShown:true,
                 title:"Home",
                 tabBarIcon:({focused, color}) => { 
@@ -16,8 +16,8 @@ const TabLayout = () => {
                     return focused ? <Text style={{color:"black", fontSize:10}}>{children}</Text> : <Text style={{color:color, fontSize:10}}>{children}</Text>
                   
                 }
-            }}/>
-            <Tabs.Screen name="calgary" options={{
+            }}/> */}
+            <Tabs.Screen name="index" options={{
                 headerShown:true,
                 title:"Calgary",
                 tabBarIcon:({focused, color}) => { 
