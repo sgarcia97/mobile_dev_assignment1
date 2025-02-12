@@ -10,7 +10,7 @@ const Template = ({children, ...props}:TemplateProps) => {
       
         <>
             <ScrollView style={styles.scrView}>
-                <View>{children}</View>
+                <View >{children}</View>
             </ScrollView>
           </>
     )
