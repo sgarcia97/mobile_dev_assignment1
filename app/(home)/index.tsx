@@ -5,7 +5,6 @@ import CityButton from "../../components/CityButton";
 import CityDescriptions from "../../components/CityDescriptions";
 
 const Home = () => {
-
   return (
     <Template>
       <Image

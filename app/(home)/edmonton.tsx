@@ -5,10 +5,6 @@ import CityButton from "../../components/CityButton";
 import CityDescriptions from "../../components/CityDescriptions";
 
 const Home = () => {
-  const openCityPage = () => {
-    Linking.openURL("https://www.edmonton.ca/");
-  };
-
   return (
     <Template>
       <Image
@@ -16,7 +12,7 @@ const Home = () => {
         style={styles.pageImage}
       />
       <Text style={styles.welcometitle}>Welcome to Edmonton</Text>
-      <CityButton color="#005087" link="https://www.calgary.ca/home.html" text="Go to City page"/>
+      <CityButton color="#005087" link="https://www.edmonton.ca/" text="Go to City page"/>
       <CityDescriptions city="Edmonton"/>
     </Template>
   );
